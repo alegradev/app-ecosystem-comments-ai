@@ -19,8 +19,8 @@
     "vue-router": "4.3.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "1.1.2",
-    "@rsbuild/plugin-sass": "1.1.0",
+    "@rsbuild/core": "1.2.4",
+    "@rsbuild/plugin-sass": "1.2.1",
     "@rsbuild/plugin-vue": "1.0.5",
     "@typescript-eslint/eslint-plugin": "5.41.0",
     "@typescript-eslint/parser": "5.41.0",
