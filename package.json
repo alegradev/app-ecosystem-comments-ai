@@ -12,7 +12,7 @@
     "lint": "eslint . --ext .vue,.js,.ts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@alegradev/smile-ui-next": "1.2.0",
+    "@alegradev/smile-ui-next": "1.6.2",
     "lodash-es": "4.17.21",
     "pinia": "2.0.14",
     "vue": "3.4.21",
