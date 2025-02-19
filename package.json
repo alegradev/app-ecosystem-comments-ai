@@ -12,16 +12,16 @@
     "lint": "eslint . --ext .vue,.js,.ts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@alegradev/smile-ui-next": "1.6.2",
+    "@alegradev/smile-ui-next": "1.7.2",
     "lodash-es": "4.17.21",
     "pinia": "2.0.14",
     "vue": "3.4.21",
     "vue-router": "4.3.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "1.2.4",
-    "@rsbuild/plugin-sass": "1.2.1",
-    "@rsbuild/plugin-vue": "1.0.5",
+    "@rsbuild/core": "1.2.9",
+    "@rsbuild/plugin-sass": "1.2.2",
+    "@rsbuild/plugin-vue": "1.0.6",
     "@typescript-eslint/eslint-plugin": "5.41.0",
     "@typescript-eslint/parser": "5.41.0",
     "@vue/eslint-config-prettier": "7.0.0",
