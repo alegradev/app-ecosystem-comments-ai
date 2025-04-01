@@ -13,6 +13,6 @@ function getEnvironmentPrefix() {
 
 module.exports = {
   proyect_port: 1026,
-  proyect_name: 'app_alegra_template',
+  proyect_name: 'app_ecosystem_comments_ai',
   prefixEnvironment: getEnvironmentPrefix(),
 }
