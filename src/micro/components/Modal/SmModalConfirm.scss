@@ -1,0 +1,38 @@
+.header {
+  span {
+    @apply text-base;
+  }
+}
+
+.body {
+  @apply flex flex-col justify-center items-center gap-1 text-xs;
+}
+
+:deep(.sm-modal-body) {
+  @apply overflow-x-visible overflow-y-visible;
+}
+
+.footer {
+  @apply flex justify-end gap-2;
+
+  .buttons {
+    @apply flex gap-2;
+  }
+}
+
+:deep(.sm-modal-area) {
+  .sm-modal-header {
+    @apply normal-case pt-2;
+
+    svg {
+      @apply w-[20px] h-[20px] text-[#6B7280] hover:text-[#00B19D];
+    }
+  }
+
+  .sm-modal-content {
+    @apply min-w-[370px] max-w-[370px];
+  }
+  .sm-modal-footer {
+    @apply pt-2;
+  }
+}

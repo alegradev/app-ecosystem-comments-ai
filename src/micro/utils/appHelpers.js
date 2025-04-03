@@ -1,3 +1,5 @@
+import ENV from '../../../environment.json'
+
 /**
  * Take only specified keys of the object passed as argument
  * @param {Object} obj to take keys from
@@ -12,6 +14,16 @@ function pick(obj, keys) {
     }, {})
 }
 
+function getEnv(key, env = String(process.env.VUE_APP_ENVIROMENT).toLowerCase()) {
+  if (ENV[env]?.[key]) {
+    return ENV[env]?.[key]
+  } else if (ENV?.[key]) {
+    return ENV?.[key]
+  } else if (process.env[key]) {
+    return process.env[key]
+  }
+  return null
+}
 /**
  * Returns a JSON object with the content of the common and specific translations of this project
  * @param {Array<string>} paths If specified, pick only these paths from the lang files
@@ -60,4 +72,5 @@ function convertDictionaryToObject(paths = []) {
 export {
   // methods
   convertDictionaryToObject,
+  getEnv,
 }

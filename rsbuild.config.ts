@@ -15,6 +15,8 @@ const moduleFederationOptions = {
   },
   exposes: {
     './microfront': './src/micro/mount',
+    './SmComments': './src/micro/components/SmComments/SmComments.vue',
+    './DCommentInput': './src/micro/components/SmComments/DCommentInput.vue',
   },
   shared: {
     'lodash-es': { singleton: true, requiredVersion: '4.17.21' },

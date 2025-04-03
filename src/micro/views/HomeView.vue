@@ -1,41 +1,40 @@
 <template>
-  <SCard title="" class="home">
-    <div class="home__card">
-      <img alt="Vue logo" src="../assets/logo.png" />
-      <HelloWorld :title="companyName"></HelloWorld>
-
-      <nav>
-        <router-link to="/configuration">Page 1</router-link> |
-        <router-link to="/configuration/about">Page 2</router-link> |
-      </nav>
-
-      <div class="home__form">
-        <SInput v-model="name" :label="$transF('name')" size="small" />
-        <SInput v-model="email" :label="$transF('email')" size="small" />
-      </div>
-
-      <router-link to="/configuration/about">
-        <SButton>
-          {{ $transF('submit') }}
-        </SButton>
-      </router-link>
-    </div>
-  </SCard>
+  <SmComments :doc-comments="comments" />
 </template>
 
 <script setup lang="ts">
 import { SCard, SInput, SButton } from '@alegradev/smile-ui-next'
 import { useSessionStore } from 'app_alegra_commons/session'
-import HelloWorld from '../components/HelloWorld.vue'
 import { $transF } from 'app_alegra_commons/translate'
-import { computed, ref } from 'vue'
-
+import { computed, ref, provide } from 'vue'
+import SmComments from '../components/SmComments/SmComments.vue'
+import { IComment } from '../interfaces/comment.interface'
 const name = ref()
 const email = ref()
 
 const SESSION = useSessionStore()
 
 const companyName = computed(() => SESSION.company.name)
+const comments = ref<IComment[]>([
+  {
+    id: 1,
+    comment: 'comment 1',
+    status: 'active',
+  },
+  {
+    id: 2,
+    comment: 'comment 2',
+    status: 'active',
+  },
+  {
+    id: 3,
+    comment: 'comment 3',
+    status: 'active',
+  },
+])
+provide('$Props', {
+  action: 'edit', // or 'view' depending on your needs
+})
 </script>
 
 <style lang="scss" scoped>
